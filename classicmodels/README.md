@@ -1,4 +1,5 @@
-## 📁 파일 구조
+## 데이터 기반 고객·매출 전략 분석
+### 📁 파일 구조
 ```
 classicmodels-sql-analysis/
 ├── sql/
@@ -9,7 +10,7 @@ classicmodels-sql-analysis/
     └── classicmodels_erd.png                     # 데이터베이스 ERD
 ```
 
-## SQL 파일
+### SQL 파일
 ####  01_data_exploration_fundamentals.sql
 - 테이블 구조 및 레코드 수 확인
 - SELECT, WHERE, ORDER BY, LIMIT
@@ -33,4 +34,5 @@ classicmodels-sql-analysis/
 - **윈도우 함수**: 국가별 고객 랭킹 (RANK, PARTITION BY)
 - **Funnel 분석**: 고객 이탈 지점 파악
 - **장기 미구매 고객** 식별 및 리타겟팅 전략
+
 
