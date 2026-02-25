@@ -26,7 +26,7 @@
 
 ---
 
-## 🏗️ 시스템 아키텍처
+## 시스템 아키텍처
 ```
 원본 데이터 → 전처리 → 특성 추출 → 유사도 계산 → 추천
      ↓          ↓         ↓          ↓         ↓
@@ -179,3 +179,49 @@ recommendations = get_top_similar(embeddings, selected_product, top_k=5)
 ```
 
 ---
+
+### 주요 인사이트
+
+#### 1. 프레임워크 의존성의 중요성
+- **동일한 아키텍처 ≠ 동일한 결과**
+- 프레임워크 선택이 **비즈니스 결과**에 직접적 영향
+- **모델 재현성** 확보를 위한 프레임워크별 검증 필수
+
+#### 2. 다층적 성능 최적화
+- **알고리즘 레벨**: 모델 아키텍처 선택
+- **구현 레벨**: 배치 크기, 전처리 파이프라인
+- **시스템 레벨**: 하드웨어 최적화, 메모리 관리
+
+#### 3. 데이터 품질의 중요성
+- **100% 성공률** 달성을 위한 철저한 전처리
+- 이미지 검증 파이프라인의 중요성
+
+### 프로젝트 임팩트
+
+| 측면 | 달성 성과 | 비즈니스 가치 |
+|------|----------|--------------|
+| **기술적 깊이** | 멀티 프레임워크 분석 | 개발 효율성 향상 |
+| **실용성** | 실제 동작하는 추천 시스템 | 즉시 적용 가능 |
+| **확장성** | 모듈화된 아키텍처 | 유지보수 비용 절감 |
+| **연구 가치** | 예상 외 결과 발견 | 의사결정 지원 |
+
+---
+
+## 저장소 구조
+```
+fashion-recommendation/
+├── 01_data_exploration.ipynb           # 초기 데이터 분석
+├── 02_tf_embedding_extraction.ipynb    # TensorFlow 구현
+├── 03_torch_embedding_extraction.ipynb # PyTorch 구현
+├── 04_performance_comparison.py        # 프레임워크 비교 분석
+├── streamlit_app.py                    # 대시보드 애플리케이션
+├── embeddings/
+│   ├── tf_embeddings.npy              # TensorFlow 임베딩
+│   ├── torch_embeddings.npy           # PyTorch 임베딩
+│   └── metadata.csv                   # 상품 메타데이터
+├── data/
+│   └── images/                        # 패션 상품 이미지
+├── requirements.txt                    # Python 의존성
+└── README.md                          # 이 파일
+```
+
