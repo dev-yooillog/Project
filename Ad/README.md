@@ -35,26 +35,7 @@
 > 이 데이터셋을 활용하여 광고 클릭과 관련된 패턴을 분석하고, 클릭 여부를 예측하는 모델을 구축할 수 있습니다.
 
 ### 폴더구성
-Ad
-│
-├── data
-│   └── advertising.csv
-│
-├── notebooks
-│   └── ad_analysis.ipynb
-│
-├── src
-│   ├── __init__.py
-│   ├── data_loader.py
-│   ├── eda.py
-│   ├── feature_engineering.py
-│   ├── model_training.py
-│   └── evaluation.py
-│
-├── main.py
-├── config.py
-├── requirements.txt
-└── README.md
+<img width="394" height="423" alt="image" src="https://github.com/user-attachments/assets/febbf8ec-5773-4da2-a3fd-2e28a6bde4b9" />
 
 **구현기술**
 
@@ -172,3 +153,4 @@ Ad
 - main.py 통합 실행 파일 작성
 
 - README.md 및 주석 작성
+
