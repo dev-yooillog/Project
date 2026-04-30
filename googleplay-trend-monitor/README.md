@@ -132,7 +132,7 @@ python ETL/load_to_sqlite.py
 
 ## 기술 스택
 
-- **언어**: Python 3.x
+- **언어**: Python 3.10
 - **데이터 처리**: pandas, numpy
 - **데이터베이스**: SQLite (sqlite3)
 - **로깅**: Python logging 모듈
