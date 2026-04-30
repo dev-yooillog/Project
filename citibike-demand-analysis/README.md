@@ -30,10 +30,6 @@ citibike-demand-analysis/
 ├── models/
 │   └── prophet_model.pkl              # 학습된 Prophet 모델
 │
-├── outputs/
-│   ├── figures/                       # 시각화 저장
-│   └── tables/                        # 집계 결과 저장
-│
 ├── README.md
 └── requirements.txt
 ```
