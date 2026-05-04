@@ -39,7 +39,6 @@ citibike-demand-analysis/
 ## 데이터
 
 - **출처**: [Citi Bike System Data](https://citibikenyc.com/system-data)
-- **분석 기간**: 2025년 4월 ~ 9월 (6개월)
 - **총 레코드**: 28,206,527건 (이상치 제거 후 28,165,708건)
 
 | 컬럼 | 설명 |
