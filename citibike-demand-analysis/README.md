@@ -10,25 +10,25 @@
 citibike-demand-analysis/
 │
 ├── data/
-│   ├── raw/citibike_zip/              # 원본 ZIP 파일
+│   ├── raw/citibike_zip/              
 │   └── processed/
-│       ├── citibike_csv/              # ZIP 압축 해제 CSV
-│       └── citibike_parquet/          # CSV → Parquet 변환본
+│       ├── citibike_csv/              
+│       └── citibike_parquet/          # CSV → Parquet 변환
 │
 ├── notebooks/
-│   ├── 01_data_overview.ipynb         # 데이터 로드 및 기본 확인
-│   ├── 02_eda.ipynb                   # 탐색적 데이터 분석
-│   ├── 03_feature_engineering.ipynb   # 피처 생성 및 전처리
-│   ├── 04_time_series_modeling.ipynb  # 시계열 모델링 (Prophet / LightGBM)
-│   └── 05_station_analysis.ipynb      # 스테이션별 수요 분석
+│   ├── 01_data_overview.ipynb         
+│   ├── 02_eda.ipynb                  
+│   ├── 03_feature_engineering.ipynb  
+│   ├── 04_time_series_modeling.ipynb  # 시계열 모델링
+│   └── 05_station_analysis.ipynb     
 │
 ├── src/
-│   ├── extract_zip.py                 # ZIP → CSV 압축 해제
-│   ├── csv_to_parquet.py              # CSV → Parquet 변환
-│   └── data_loader.py                 # Parquet 데이터 로드
+│   ├── extract_zip.py                 
+│   ├── csv_to_parquet.py              
+│   └── data_loader.py               
 │
 ├── models/
-│   └── prophet_model.pkl              # 학습된 Prophet 모델
+│   └── prophet_model.pkl             
 │
 ├── README.md
 └── requirements.txt
@@ -95,8 +95,8 @@ Train / Test split: 마지막 7일(168시간)을 Test로 분리 (시간 순 spli
 | Model | MAE | RMSE |
 |---|---|---|
 | Baseline (lag_24) | 1,627.56 | 2,406.12 |
-| Prophet | 1,779.94 | 2,312.01 |
-| **LightGBM** | **404.19** | **621.97** |
+| Prophet | 2,024.28 | 2,637.15 |
+| **LightGBM** | **440.41** | **671.54** |
 
 → LightGBM이 Baseline 대비 **MAE 75% · RMSE 74% 개선**
 
@@ -105,6 +105,7 @@ Train / Test split: 마지막 7일(168시간)을 Test로 분리 (시간 순 spli
 - 출발 스테이션 수: 2,180개 / 도착: 2,263개
 - 순유입/유출 분석으로 자전거 재배치 우선순위 도출
 - Top 20 스테이션 × 24시간 히트맵으로 혼잡도 시각화
+- 시각화: 히트맵, 시간대별 수요(회원/비회원, 평일/주말), 월별 트렌드
 
 ---
 
